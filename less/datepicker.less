@@ -100,8 +100,7 @@
 		&.today.disabled,
 		&.today.disabled:hover {
 			@todayBackground: lighten(@brand-warning, 30%);
-			.btn-pseudo-states(@todayBackground, spin(@todayBackground, 20));
-			color: #000 !important;
+			.button-variant(#000, @todayBackground, spin(@todayBackground, 20));
 		}
 		&.range,
 		&.range:hover,
@@ -115,23 +114,21 @@
 		&.range.today.disabled,
 		&.range.today.disabled:hover {
 			@todayBackground: mix(@brand-warning, @grayLighter);
-			.btn-pseudo-states(@todayBackground, spin(@todayBackground, 20));
+			.button-variant('', @todayBackground, spin(@todayBackground, 20));
 			.border-radius(0);
 		}
 		&.selected,
 		&.selected:hover,
 		&.selected.disabled,
 		&.selected.disabled:hover {
-			.btn-pseudo-states(lighten(@grayLight, 10), darken(@grayLight, 10));
-			color: #fff;
+			.button-variant(#fff, lighten(@grayLight, 10), darken(@grayLight, 10));
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
 		&.active,
 		&.active:hover,
 		&.active.disabled,
 		&.active.disabled:hover {
-			.btn-pseudo-states(@btn-primary-bg, spin(@btn-primary-border, 20));
-			color: #fff;
+			.button-variant(#fff, @btn-primary-bg, spin(@btn-primary-border, 20));
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
 		span {
@@ -156,8 +153,7 @@
 			&.active:hover,
 			&.active.disabled,
 			&.active.disabled:hover {
-				.btn-pseudo-states(@btn-primary-bg, spin(@btn-primary-border, 20));
-				color: #fff;
+				.button-variant(#fff, @btn-primary-bg, spin(@btn-primary-border, 20));
 				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
